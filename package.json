@@ -1,8 +1,8 @@
 {
   "name": "kookie",
   "displayName": "Kookie",
-  "version": "0.0.1",
-  "description": "A basic Plasmo extension.",
+  "version": "1.0.0",
+  "description": "A powerful cookie manager Chrome extension that helps you view, edit, import and export cookies across domains. Features include bulk operations, domain filtering, and clipboard integration.",
   "author": "gooney",
   "scripts": {
     "dev": "plasmo dev",
@@ -10,6 +10,10 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "@mantine/core": "^7.13.4",
+    "@mantine/hooks": "^7.13.4",
+    "@mantine/notifications": "^7.13.4",
+    "@tabler/icons-react": "^3.21.0",
     "plasmo": "0.89.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -20,12 +24,23 @@
     "@types/node": "20.11.5",
     "@types/react": "18.2.48",
     "@types/react-dom": "18.2.18",
+    "postcss": "^8.4.47",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
     "prettier": "3.2.4",
     "typescript": "5.3.3"
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://*/*",
+      "http://*/*"
+    ],
+    "permissions": [
+      "cookies",
+      "storage",
+      "tabs",
+      "clipboardWrite",
+      "clipboardRead"
     ]
   }
 }

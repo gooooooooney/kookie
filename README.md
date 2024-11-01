@@ -1,33 +1,113 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# Kookie - Cookie Manager Chrome Extension
 
-## Getting Started
+A powerful Chrome extension for managing browser cookies with an intuitive interface for viewing, editing, importing, and exporting cookies across domains.
 
-First, run the development server:
+[中文文档](README.zh-CN.md)
 
+## ✨ Features
+
+- 🔍 View all cookies for the current website
+- ✏️ Edit all properties of individual cookies
+- 📋 Import/Export cookies via clipboard
+- 🔄 Bulk modify cookie domains
+- 🏷️ Filter cookies by domain
+- 🔎 Search for specific cookies
+- ➕ Add new cookies
+- 🗑️ Delete individual or all cookies
+
+## 🖼️ Screenshots
+
+[Add screenshots here]
+
+## 🛠️ Tech Stack
+
+- [Plasmo](https://docs.plasmo.com/) - Chrome extension framework
+- [React](https://reactjs.org/) - UI library
+- [Mantine](https://mantine.dev/) - UI component library
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/kookie.git
+cd kookie
+```
+
+2. Install dependencies:
+```bash
+pnpm install
+```
+
+3. Start development server:
 ```bash
 pnpm dev
-# or
-npm run dev
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+4. Load the extension in Chrome:
+   - Open `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the `build/chrome-mv3-dev` directory
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+## 📦 Build
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
-
+Generate production build:
 ```bash
 pnpm build
-# or
-npm run build
 ```
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+Package the extension:
+```bash
+pnpm package
+```
 
-## Submit to the webstores
+## 📖 Usage Guide
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+1. **View Cookies**
+   - Click the extension icon to open the manager
+   - All cookies are displayed in a list
+   - Click to expand for detailed information
+
+2. **Edit Cookies**
+   - Click the edit icon next to a cookie
+   - Modify the properties
+   - Click save to apply changes
+
+3. **Import/Export**
+   - Click "Copy" to export cookies
+   - Click "Paste" to import from clipboard
+   - Option to edit domains before import/export
+
+4. **Filter and Search**
+   - Use the domain selector to filter specific domains
+   - Use the search box to find specific cookies
+
+## 🔒 Privacy
+
+This extension:
+- Only accesses cookies when explicitly requested
+- Does not collect any user data
+- Does not send data to any external servers
+- All operations are performed locally in your browser
+
+## 📄 License
+
+[MIT License](LICENSE)
+
+## 👤 Author
+
+gooney
+
+## 🤝 Contributing
+
+Issues and Pull Requests are welcome!
+
+## 📝 Changelog
+
+### 1.0.0
+- Initial release
+- Basic cookie management features
+- Import/Export functionality
+- Domain filtering and search
+- Bulk operations support
